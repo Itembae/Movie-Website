@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+    <form action="/watch" method="post">
+        <div class="mb-3">
+            <select name="filter" id="filter">
+                <option disabled selected value="">Filter By</option>
+                <option name="director">director</option>
+                <option name="actor">actor</option>
+                <option name="year">year</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="of" autofocus class="form-control mx-auto w-auto" id="search" name="search" placeholder="Search For Movies" type="search">
+        </div>
+        <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+
+{% endblock %}

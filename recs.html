@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Recommendations
+{% endblock %}
+
+{% block main %}
+<h1>Your Recs</h1>
+                {% for row in rec %}
+                            <div>{{row.title}}</div>
+                            <div>{{row.rating}}</div>
+                        {% endfor %}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Searched
+{% endblock %}
+
+{% block main %}
+<h1>Reviews</h1>
+{% for row in result %}
+    <div>
+        <div>{{row.username}} said </div>
+        <h5 class=left style="display: inline-block;">{{row.title}}</h5>
+        <p style="display: inline-block;"> -{{row.score}}/10</p>
+        <p>{{row.review}}</p>
+    </div>
+{% endfor %}
+
+<h1>Overall</h1>
+{% for row in summary %}
+{% for star in stars %}
+    <div>
+        <div style="display: inline-block;">{{row.title}}</div>
+        <h5 class=left style="display: inline-block;">{{row.year}}</h5>
+        <p style="display: inline-block;"> -{{star.points}}/10</p>
+        <div>{{row.review}}</div>
+    </div>
+{% endfor %}
+{% endfor %}
+
+{% endblock %}

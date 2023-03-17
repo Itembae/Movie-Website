@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Profile
+{% endblock %}
+
+{% block main %}
+
+<div class="container-fluid" id="box">
+<h1>Personal Information</h1>
+    <table>
+
+                {% for row in user %}
+                    <div><h4 style="display: inline-block;">Username</h4>
+                        <tr style="display: inline-block;" >{{row.username}}</tr>
+                    </div>
+                    <div>
+                            <tr>{{row.email}}</tr>
+                        </div>
+                            <div><tr>{{row.birthday}}</tr></div>
+                            {% endfor %}
+    </table>
+</div>
+
+<h2>Your Reviews</h2>
+                {% for row in post %}
+                        <div>
+                            <h5 class=left style="display: inline-block;">{{row.title}}</h5>
+                            <p style="display: inline-block;"> -{{row.score}}/10</p>
+                            <div class="user">{{row.username}}</div>
+                            <div>{{row.review}}</div>
+                            <div class="stamp">{{row.date}}</div>
+                            </div>
+                        {% endfor %}
+
+
+{% endblock %}

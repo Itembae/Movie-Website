@@ -1,0 +1,93 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .black
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+
+body
+{
+    background-color: steelblue;
+    color: #212529;
+    font-size: 1rem;
+    font-family: "Merriweather", serif;
+    font-weight:400;
+    line-height: 1.5;
+    margin: 30px 30px 30px 30px;
+    text-align: left;
+}
+
+
+h5
+{
+    text-align: left;
+    text-decoration: bold;
+}
+
+.user
+{
+    text-align: right;
+    font-weight:400;
+}
+
+header
+{
+    font-size: 2rem;
+    font-family: "Times New Roman", serif;
+    font-weight: 500;
+    background-color: steelblue;
+    word-spacing: 200px;
+    text-align: center;
+}
+
+
+.stamp
+{
+    text-align: right;
+    font-weight:200;
+}
+
+
+p.double {outline-style: double;}
+
+.score
+{
+    text-align: right;
+    font-weight:200;
+}
+
+
+table
+{
+    background-color: #EFFFFD;
+    color: black;
+    font-size: 1rem;
+    font-family: "Verdana", sans-serif;
+    font-weight:400;
+    line-height: 1.5;
+    margin: 30px 30px 30px 30px;
+    text-align: left;
+}
+
+b
+{
+    text-align: right;
+}

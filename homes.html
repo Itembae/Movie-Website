@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<div class="accordion" id="accordionExample">
+
+<h1>Fresh Reviews</h1>
+{% for row in logs %}
+<div class="accordion-item">
+    <h2 class="accordion-header" id="heading_{{row.id}}">
+      <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapse{{row.id}}">
+        <strong text-align:center>{{row.title}}</strong>
+      </button>
+      <b text-align:center>Rating:{{row.score}}/10</b>
+    </h2>
+    <div id="collapse_row.id" class="accordion-collapse " aria-labelledby="heading_row.id" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong text-align: center> {{row.username}} says:</strong>{{row.review}}
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+{# {% for row in logs %}
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <strong text-align:center>{{row.title}}</strong>Rating:<b text-align:center>{{row.score}}</b>
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse " aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong text-align: center> {{row.username}} says:</strong>{{row.review}}
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %} #}
+
+{% endblock %}

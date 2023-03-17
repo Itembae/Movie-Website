@@ -1,0 +1,29 @@
+CREATE TABLE users (
+    ID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+
+CREATE TABLE users (id INTEGER, username TEXT NOT NULL, hash TEXT NOT NULL, birthday DATE, PRIMARY KEY(id));
+
+CREATE TABLE reviews (id INTEGER, username TEXT NOT NULL, title TEXT, rating INTEGER, review TEXT, date DATETIME DEFAULT CURRENT_TIMESTAMP);
+
+
+INSERT into reviews (username, title, rating, review) VALUES ('joseph', 'gringo', '5', 'jackson');
+
+ALTER TABLE users ADD email nvarchar(255);
+
+
+SELECT title FROM movies
+
+
+SELECT title FROM movies JOIN directors ON directors.movie_id = movies.id JOIN people ON people.id = directors.person_id WHERE name = "Tim Burton"
+
+
+                summary = mb.execute("SELECT title, year, rating FROM movies, ratings JOIN ratings ON ratings.movie_id = movies.id WHERE title = ?", query)
+        results = db.execute("SELECT username, title, rating, review FROM reviews WHERE title = ?", query)
+
+
+        w3-container w3-cellw3-container w3-cell
